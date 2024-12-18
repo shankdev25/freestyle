@@ -4,7 +4,7 @@ sap.ui.define([
  ], (Controller, MessageToast) => {
     "use strict";
  
-    return Controller.extend("ui5.walkthrough.controller.HelloPanel", {
+    return Controller.extend("ui5.learnui5init.controller.HelloPanel", {
        onShowHello() {
           // read msg from i18n model
           const oBundle = this.getView().getModel("i18n").getResourceBundle();
@@ -16,6 +16,19 @@ sap.ui.define([
        },
        onSliderMoved(){
          MessageToast.show("Boom Boom");
-       }
+       },
+       async onOpenDialog() {
+         // create dialog lazily
+         this.oDialog ??= await this.loadFragment({
+             name: "ui5.learnui5init.view.HelloDialog"
+         });
+     
+         this.oDialog.open();
+     },
+     onCloseDialog() {
+      // note: We don't need to chain to the pDialog promise, since this event handler
+      // is only called from within the loaded dialog itself.
+      this.byId("helloDialog").close();
+   }
     });
  });
