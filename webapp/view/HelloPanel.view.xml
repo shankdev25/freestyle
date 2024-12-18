@@ -1,0 +1,36 @@
+<mvc:View
+   controllerName="ui5.learnui5init.controller.HelloPanel"
+   xmlns="sap.m"
+   xmlns:mvc="sap.ui.core.mvc">
+   <Panel
+      headerText="{i18n>helloPanelTitle}"
+      class="sapUiResponsiveMargin"
+      width="auto">
+      <content>
+      <Vbox>
+       <HBox>
+         <Button
+            text="{i18n>showHelloButtonText}"
+            press=".onShowHello"/>
+         <Input
+            value="{/recipient/name}"
+            valueLiveUpdate="true"
+            width="auto"/>
+            </HBox>
+            <Text
+               wrapping="true"
+			text="Lorem ipsum dolor sit amet,(1 line break follows)&#xA;consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt (2 line breaks follow)&#xA;&#xA;ut labore et dolore magna aliquyam erat, (4 tabs follow)&#x9;&#x9;&#x9;&#x9;sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. (1 line break follows)&#xA;Stet clita kasd gubergren, no sea takimata sanctus est (7 spaces follow)       Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat,(7 spaces follow)       sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. (7 spaces follow)       Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.Lorem (6 tabs follow)&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet:" 
+            />
+            <Label text="Wrapping" />
+		<Switch state="true" change=".onWrappingChange" />
+		<Label text="RenderWhitespace" />
+		<Switch state="true" change=".onRenderWhitespaceChange" />
+		<Label text="Container Width" />
+		<Slider
+			id="widthSlider"
+			value="100"
+			liveChange=".onSliderMoved" />
+          </Vbox>  
+      </content>
+   </Panel>
+</mvc:View>
