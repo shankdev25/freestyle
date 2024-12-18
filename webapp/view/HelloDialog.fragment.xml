@@ -1,6 +1,12 @@
 <core:FragmentDefinition
    xmlns="sap.m"
    xmlns:core="sap.ui.core">
+
+   <panel>
+   <Text text = "Straigth from fragment" />
+   </panel>
+   
+   
    <Dialog
       id="helloDialog"
       title="Hello {/recipient/name}">
