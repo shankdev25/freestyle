@@ -9,8 +9,8 @@
       width="auto">
       <content>
       <Vbox>
-          <shank:Fragment fragmentName="ui5.learnui5init.view.HelloDialog" type="XML" />
-           <Text text="Content After Fragment" />
+          <!-- <shank:Fragment fragmentName="ui5.learnui5init.view.HelloDialog" type="XML" />
+           <Text text="Content After Fragment" /> -->
        <HBox>
          <Button
             text="{i18n>showHelloButtonText}"

@@ -25,6 +25,7 @@ xmlns="sap.m"
                   </content>
                </Panel> -->
 						<mvc:XMLView viewName="ui5.learnui5init.view.HelloPanel"/>
+                  <mvc:XMLView viewName="ui5.learnui5init.view.InvoiceList"/>
 
             </content>
          </Page>
